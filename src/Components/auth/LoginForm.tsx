@@ -1,4 +1,4 @@
-import { useState, type FormEvent, type ReactNode } from 'react';
+import { useState, type FormEvent, } from 'react';
 import { ShopButton } from '../Common/ShopButton';
 import { TextField } from '../Common/TextField';
 
@@ -7,12 +7,10 @@ type Props = {
   subtitle?: string;
   /** ログイン処理。失敗時は Error を throw する */
   onLogin: (email: string, password: string) => Promise<void>;
-  /** フォーム下部（新規登録リンクなど） */
-  footer?: ReactNode;
 };
 
 /** ログインフォーム（店舗・管理者共通） */
-export const LoginForm = ({ title, subtitle, onLogin, footer }: Props) => {
+export const LoginForm = ({ title, subtitle, onLogin, }: Props) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -57,8 +55,6 @@ export const LoginForm = ({ title, subtitle, onLogin, footer }: Props) => {
         disabled={submitting}
         fullWidth
       />
-
-      {footer && <div className="login-form__footer">{footer}</div>}
     </form>
   );
 };

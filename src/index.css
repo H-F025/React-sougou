@@ -10,7 +10,6 @@ body {
   color: #333;
 }
 
-/* 2分割レイアウト（左：ブランドエリア / 右：フォームエリア） */
 .admin-login {
   min-height: 100vh;
   display: grid;
