@@ -1,12 +1,14 @@
-import './index.css'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router';
+import './index.css';
+import { AdminPage } from './Pages/Admin/AdminLoginPage';
 
-function App() {
+export const App = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/admin" element={<AdminPage />} />
+      <Route path="*" element={<Navigate to="/admin" replace />} />
+    </Routes>
+  </BrowserRouter>
+);
 
-  return (
-    <>
-
-    </>
-  )
-}
-
-export default App
+export default App;
