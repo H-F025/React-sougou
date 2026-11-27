@@ -1,0 +1,1 @@
+export const APP_NAME = "飲食店リアルタイム空席確認アプリ"
