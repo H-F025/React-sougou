@@ -2,7 +2,7 @@
 import type { ReactNode } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router';
 import './index.css';
-import { AdminPage } from './Pages/Admin/AdminLoginPage';
+import { AdminLoginPage } from './Pages/Admin/AdminLoginPage';
 import { NotFoundPage } from './Pages/Admin/NotFoundPage';
 
 /** ログイン判定（仮の実装：false のときは未ログイン扱い） */
@@ -20,7 +20,7 @@ export const App = () => (
   <BrowserRouter>
     <Routes>
       {/* ログイン画面 */}
-      <Route path="/admin/login" element={<AdminPage />} />
+      <Route path="/admin/login" element={<AdminLoginPage />} />
       <Route path="/404" element={<NotFoundPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>

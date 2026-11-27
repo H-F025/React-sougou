@@ -1,0 +1,158 @@
+/* src/index.css */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: #333;
+}
+
+.admin-login {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 3fr 6fr;
+}
+
+.admin-login__brand {
+  background: #888;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 160px 40px;
+  text-align: center;
+}
+
+.admin-login__form {
+  display: grid;
+  place-content: center;
+  padding: 40px;
+  background: #fff;
+}
+
+/* ログインフォーム全体 */
+.login-form {
+  width: 300px;
+}
+
+.login-form__title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 8px;
+}
+
+.login-form__subtitle {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  margin: 0 0 24px;
+}
+
+/* 入力欄（TextField） */
+.field {
+  margin-bottom: 16px;
+}
+
+.field__label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.field__wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.field__wrap input {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.field__wrap input:focus {
+  border-color: #888;
+}
+
+/* エラー文言 */
+.form-error {
+  color: #B22222;
+  font-size: 12px;
+  margin: 8px 0;
+}
+
+/* ログインボタン（ShopButton） */
+.login-form .btn {
+  width: 100%;
+  height: 40px;
+  margin-top: 12px;
+  background-color: #999999;
+  color: #222222;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-form .btn:hover:not(:disabled) {
+  background-color: #888888;
+}
+
+.login-form .btn:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+/* フォーム下部リンク */
+.login-form__footer {
+  border-top: none;
+  margin-top: 16px;
+  text-align: center;
+  font-size: 11px;
+}
+
+.muted-link {
+  color: #666;
+  text-decoration: underline;
+}
+
+.demo-note {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+}
+
+.field__wrap input.field__input--password {
+  padding-right: 38px;
+}
+
+/* 入力欄の中に入る目のマーク */
+.field__eye-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  color: #888;
+  cursor: pointer;
+  user-select: none;
+}
+
+.field__eye-icon:hover {
+  color: #333;
+}
