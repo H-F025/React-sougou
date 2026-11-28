@@ -1,5 +1,3 @@
-/* src/index.css */
-
 * {
   box-sizing: border-box;
 }
@@ -103,7 +101,6 @@ body {
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.2s;
 }
 
 .login-form .btn:hover:not(:disabled) {
@@ -155,4 +152,128 @@ body {
 
 .field__eye-icon:hover {
   color: #333;
+}
+/*  管理者レイアウト */
+.admin-layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+}
+
+/* --- サイドバー --- */
+.admin-sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 14px;
+  background: #fff;
+  border-right: 1px solid #e2e6ea;
+}
+
+.admin-sidebar__logo {
+  margin: 0 0 32px;
+  padding: 0 6px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.admin-sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e6ea;
+}
+
+.admin-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  color: #333;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.admin-nav:hover {
+  background: #eeeeee;
+}
+
+.admin-nav.is-active {
+  background: #9a9a9a;
+  color: #111;
+  font-weight: 700;
+}
+
+.admin-sidebar__logout {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding: 10px 12px;
+  border: none;
+  background: none;
+  color: #333;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.admin-sidebar__logout:hover {
+  color: #000;
+}
+
+.admin-body {
+  display: flex;
+  flex-direction: column;
+  background: #f4f6f8;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  padding: 0 32px;
+  background: #9a9a9a;
+}
+
+.admin-header__title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.admin-header__user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.admin-header__avatar {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #fff;
+  font-size: 10px;
+}
+
+.admin-main {
+  flex: 1;
+  padding: 24px 32px;
+}
+
+/* タブレット幅以下はサイドバーを隠す */
+@media (max-width: 900px) {
+  .admin-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-sidebar {
+    display: none;
+  }
 }
