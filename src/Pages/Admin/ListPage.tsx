@@ -16,7 +16,6 @@ export const ListPage = () => {
 
         <nav className="admin-sidebar__nav">
           <NavLink to="/admin/list" end className={({ isActive }) => `admin-nav ${isActive ? 'is-active' : ''}`}>
-            <LayoutGrid size={16} aria-hidden />
             リスト
           </NavLink>
           <NavLink

@@ -101,7 +101,6 @@ body {
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.2s;
 }
 
 .login-form .btn:hover:not(:disabled) {
