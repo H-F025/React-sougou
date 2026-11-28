@@ -1,4 +1,3 @@
-// src/Pages/NotFoundPage.tsx
 export const NotFoundPage = () => {
   return (
     <div>

@@ -1,26 +1,17 @@
-// src/App.tsx
-import type { ReactNode } from 'react';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router';
+import { BrowserRouter, Route, Routes } from 'react-router';
 import './index.css';
-import { AdminPage } from './Pages/Admin/AdminLoginPage';
+import { AdminLoginPage } from './Pages/Admin/AdminLoginPage';
+import { ListPage } from './Pages/Admin/ListPage';
 import { NotFoundPage } from './Pages/Admin/NotFoundPage';
 
-/** ログイン判定（仮の実装：false のときは未ログイン扱い） */
-const RequireAuth = ({ page }: { page: ReactNode }) => {
-  const isLoggedIn = false; // 実際は useAuth() などのログイン状態を使う
-
-  if (!isLoggedIn) {
-    // ログインしていない場合は 404 へ飛ばす
-    return <Navigate to="/404" replace />;
-  }
-  return page;
-};
+// ログイン判定（RequireAuth）は useAuth を作る時に追加する
 
 export const App = () => (
   <BrowserRouter>
     <Routes>
-      {/* ログイン画面 */}
-      <Route path="/admin/login" element={<AdminPage />} />
+      {/* 管理者 */}
+      <Route path="/admin/login" element={<AdminLoginPage />} />
+      <Route path="/admin/list" element={<ListPage />} />
       <Route path="/404" element={<NotFoundPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
