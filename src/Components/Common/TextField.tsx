@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Eye, EyeOff } from 'lucide-react';
+import { Eye } from 'lucide-react';
 
 type TextFieldProps = {
   label: string;
@@ -38,20 +38,8 @@ export const TextField = ({
           autoComplete={autoComplete}
         />
         {isPassword && (
-          <span
-            className="field__eye-icon"
-            onClick={() => setShowPassword((prev) => !prev)}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                setShowPassword((prev) => !prev);
-              }
-            }}
-            aria-label={showPassword ? 'パスワードを隠す' : 'パスワードを表示'}
-          >
-            {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+          <span onClick={() => setShowPassword((prev) => !prev)}>
+            <Eye size={18} />
           </span>
         )}
       </div>

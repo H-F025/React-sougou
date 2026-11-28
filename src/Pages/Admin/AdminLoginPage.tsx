@@ -10,7 +10,7 @@ export const AdminLoginPage = () => {
     // 仮のログイン判定（後で useAuth / authApi に置き換え）
     if (email === 'admin@example.com' && password === 'admin1234') {
       alert('管理者ログインに成功しました！（次は一覧画面へ遷移します）');
-      navigate('/admin');
+      navigate('/admin/list');
     } else {
       throw new Error('メールアドレスまたはパスワードが正しくありません');
     }

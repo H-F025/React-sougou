@@ -240,7 +240,7 @@ body {
   background: #9a9a9a;
 }
 
-.admin-header__title {
+.admin-header__title h1 {
   margin: 0;
   font-size: 22px;
   font-weight: 700;
