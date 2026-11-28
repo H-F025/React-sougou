@@ -1,8 +1,8 @@
-import { Link, useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
 import { LoginForm } from '../../Components/auth/LoginForm';
 import { APP_NAME } from '../../Constants';
 
-/** 管理者ログイン画面 */
+/* 管理者ログイン画面 */
 export const AdminLoginPage = () => {
   const navigate = useNavigate();
 
